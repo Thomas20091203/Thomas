@@ -1,0 +1,104 @@
+如果你希望在网站上展示代理人信息（比如你自己作为网站的联系或管理员），你可以在网页中添加相关的信息，比如个人简介、联系方式等。我将修改原来的示例，加入一个代理人部分来展示这些信息。
+
+### 完整的 HTML 文件
+
+```html
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>戒掉手淫支持网站</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #2c3e50;
+        }
+        p {
+            font-size: 16px;
+            line-height: 1.6;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .form-group input[type="text"],
+        .form-group input[type="email"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .form-group button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            background-color: #2ecc71;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .form-group button:hover {
+            background-color: #27ae60;
+        }
+        .reminder {
+            margin-top: 20px;
+            font-size: 16px;
+            background-color: #eafaf1;
+            padding: 15px;
+            border-radius: 4px;
+            border: 1px solid #b2d8b0;
+        }
+        .agent-info {
+            margin-top: 30px;
+            padding: 15px;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .agent-info h2 {
+            color: #2c3e50;
+        }
+        footer {
+            margin-top: 20px;
+            font-size: 14px;
+            text-align: center;
+            color: #888;
+        }
+    </style>
+    <script>
+        function showReminder() {
+            const today = new Date();
+            const reminders = [
+                "每天坚持向前走一点，你会看到不同的自己。",
+                "不要放弃，每一天都是新的开始。",
+                "每一次的挑战都是对你的成长。",
+                "保持耐心，你的努力终将会有回报。"
+            ];
+            const reminder = reminders[today.getDay() % reminders.length];
+            document.getElementById('daily-reminder').innerText = reminder;
+        }
+
+        function handleRegistration() {
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            if (name && email) {
+                alert('感谢您的注册！每日提醒将通过邮箱发送给您。');
+                // 这里可以添加发送注册信息到服务器的逻辑
